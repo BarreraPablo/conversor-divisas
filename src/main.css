@@ -1,0 +1,42 @@
+.cuadro {
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    justify-content: center;
+    
+}
+
+header {
+    font-size: 25px;
+    color: white;
+    background-color: #6bce9b;
+    padding: 2px;
+}
+
+strong {
+    margin-left: 5px
+}
+
+body {
+    background-color: rgb(241, 239, 239);
+}
+
+.formato-select {
+    margin-top: 30px;
+    margin-right: 12px;
+}
+.formato-select1 {
+    margin-top: 46px;
+    margin-right: 12px;
+}
+
+.espacio{
+    margin-top: 20px;
+}
+
+.flecha {
+    margin-top: 45px;
+    margin-left: 63px;
+    border: 1px solid rgb(153, 151, 151);
+    border-right: 0px solid white;
+    padding: 42px
+}
