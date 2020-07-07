@@ -1,4 +1,4 @@
-export function obtenerMonedasStorage (url) {
+export function obtenerMonedasStorage () {
 	const monedas = localStorage.getItem('monedas');
 
 	if (monedas === null) {
