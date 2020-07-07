@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" media="screen" href="src/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="src/css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">  	 
+	<title>Conversor de Divisas</title>
+</head>
+<body>
+	<div class="container cuadro">
+		<titulo>Conversor de Divisas</titulo>
+
+
+		<div class="row formato-fila">
+			<div class="col-1 columna">
+				<div class="flecha">
+				</div>
+			</div>
+			<div class="col">
+				<div class="form-group">
+					<label>Importe a convertir</label>
+					<input type="number" class="form-control" placeholder="Ingrese un monto a convertir" min="0"  step="any" id="monto-input">
+				</div>
+				<div class="form-group">
+					<label>Importe convertido</label>
+					<input type="number" class="form-control" placeholder="Aca figurara el importe convertido" step="any" id="monto-output">
+				</div>
+			</div>
+			<div class="col">
+				<div class="form-group formato-select">
+					<select class="form-control" id="moneda-entry">
+						<option value="">Seleccione una divisa</option>
+					</select>
+				</div>
+
+				<div class="form-group formato-select1">
+					<select class="form-control" id="moneda-output">
+						<option value="">Seleccione una divisa</option>
+					</select>
+				</div>
+			</div>
+	  </div>
+	</div>
+
+	<script src="src/js/main.js" type="module"></script>
+	</body>
+</html>
