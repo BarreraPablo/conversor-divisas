@@ -1,0 +1,60 @@
+.cuadro {
+    background-color: rgb(255, 255, 255);
+    margin-top: 15px;
+    padding: 0;
+    justify-content: center;
+    border: 1px solid rgb(209, 208, 208);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+titulo {
+    display: block;
+    font-size: 30px;
+    color: white;
+    background-color: #6bce9b;
+    padding: 5px;
+    padding-left: 15px;
+    font-family: 'Lora', serif;
+}
+
+
+body {
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, rgb(255, 255, 255), rgb(214, 215, 216)) repeat scroll 0% 0%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.formato-fila {
+    margin-top: 15px;
+}
+
+
+.formato-select {
+    margin-top: 30px;
+    margin-right: 12px;
+}
+.formato-select1 {
+    margin-top: 46px;
+    margin-right: 12px;
+}
+
+.columna {
+    max-width: 5%;
+}
+
+.flecha {
+    margin-top: 48px;
+    margin-left: 30px;
+    border: 1px solid rgb(153, 151, 151);
+    border-right: 0px solid white;
+    padding: 41px;
+}

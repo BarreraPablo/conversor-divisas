@@ -1,0 +1,28 @@
+{
+  "name": "conversor-divisas",
+  "version": "1.0.0",
+  "description": "Realiza conversiones de divisas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BarreraPablo/conversor-divisas.git"
+  },
+  "author": "Pablo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BarreraPablo/conversor-divisas/issues"
+  },
+  "homepage": "https://github.com/BarreraPablo/conversor-divisas#readme",
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
