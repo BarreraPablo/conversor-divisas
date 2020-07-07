@@ -16,57 +16,25 @@ export async function obtenerMonedas () {
 	return monedas;
 }
 
-let banSelectEntry = false;
-let banSelectOutput = false;
-let banMonto = false;
-
-function eventSelectEntry ($selectDivisa) {
-	if ($selectDivisa.value !== '') {
-		banSelectEntry = true;
-	} else if ($selectDivisa.value === '') {
-		banSelectEntry = false;
-	}
-
-	realizarConversion();
-}
-
-function eventSelectOutput ($selectDivisa) {
-	if ($selectDivisa.value !== '') {
-		banSelectOutput = true;
-	} else if ($selectDivisa.value === '') {
-		banSelectOutput = false;
-	}
-
-	realizarConversion();
-}
-
-function eventMontoInput ($montoInput) {
-	if ($montoInput.value !== '') {
-		banMonto = true;
-	} else if ($montoInput.value === '') {
-		banMonto = false;
-	}
-	if (Number($montoInput.value) <= 0) {
-		banMonto = false;
-	}
-
-	realizarConversion();
-}
-
 export function habilitarEventListeners () {
 	const $selectDivisaEntry = document.querySelector('#moneda-entry');
-	$selectDivisaEntry.addEventListener('change', eventSelectEntry.bind(null, $selectDivisaEntry));
+	$selectDivisaEntry.addEventListener('change', realizarConversion);
 
 	const $selectDivisaOutput = document.querySelector('#moneda-output');
-	$selectDivisaOutput.addEventListener('change', eventSelectOutput.bind(null, $selectDivisaOutput));
+	$selectDivisaOutput.addEventListener('change', realizarConversion);
 
 	const $montoInput = document.querySelector('#monto-input');
-
-	$montoInput.addEventListener('keyup', eventMontoInput.bind(null, $montoInput));
+	$montoInput.addEventListener('keyup', realizarConversion);
 }
 
 async function realizarConversion () {
-	if (banSelectEntry && banSelectOutput && banMonto) {
+	const valorDivisaEntry = document.querySelector('#moneda-entry').value;
+	const valorDivisaOutput = document.querySelector('#moneda-output').value;
+	const valorMontoInput = document.querySelector('#monto-input').value;
+
+	console.log(valorDivisaEntry, valorDivisaOutput, valorMontoInput);
+
+	if (valorDivisaEntry !== '' && valorDivisaOutput !== '' && valorMontoInput !== '' && Number(valorMontoInput) > 0) {
 		const divisaEntry = document.querySelector('#moneda-entry').value;
 		const divisaOutput = document.querySelector('#moneda-output').value;
 		let tipoCambios;
