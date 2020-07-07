@@ -32,8 +32,6 @@ async function realizarConversion () {
 	const valorDivisaOutput = document.querySelector('#moneda-output').value;
 	const valorMontoInput = document.querySelector('#monto-input').value;
 
-	console.log(valorDivisaEntry, valorDivisaOutput, valorMontoInput);
-
 	if (valorDivisaEntry !== '' && valorDivisaOutput !== '' && valorMontoInput !== '' && Number(valorMontoInput) > 0) {
 		const divisaEntry = document.querySelector('#moneda-entry').value;
 		const divisaOutput = document.querySelector('#moneda-output').value;

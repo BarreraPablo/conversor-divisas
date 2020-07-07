@@ -9,11 +9,21 @@ export function obtenerMonedasStorage () {
 }
 
 export function guardarMonedasStorage (monedas) {
-	localStorage.setItem('monedas', JSON.stringify(monedas));
+	try {
+		localStorage.setItem('monedas', JSON.stringify(monedas));
+	} catch (e) {
+		console.log(e);
+		localStorage.clear();
+	}
 }
 
 export function guardarCambioStorage (divisa, cambios) {
-	localStorage.setItem(divisa, JSON.stringify(cambios));
+	try {
+		localStorage.setItem(divisa, JSON.stringify(cambios));
+	} catch (e) {
+		console.log(e);
+		localStorage.clear();
+	}
 }
 
 export function obtenerCambioStorage (divisa) {
