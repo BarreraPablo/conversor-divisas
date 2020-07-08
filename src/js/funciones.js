@@ -45,14 +45,14 @@ async function realizarConversion(banDivisaEntry = false) {
     const valorMontoInput = document.querySelector('#monto-input').value;
     let tipoCambios;
 
-    if (banDivisaEntry && valorDivisaEntry !== '') { // Cuando cambia la divisa de entrada se obtienen y guardan los tipo de cambios de esa moneda
+    if (banDivisaEntry && valorDivisaEntry !== '') { // La intención es guardar en el localStorage los tipo de cambios apenas se cambia el input
         tipoCambios = await obtenerCambios(valorDivisaEntry);
     }
 
     const $montoOutput = document.querySelector('#monto-output');
     if (valorDivisaEntry !== '' && valorDivisaOutput !== '' && valorMontoInput !== '' && Number(valorMontoInput) > 0) {
         if (!banDivisaEntry) {
-            tipoCambios = obtenerCambioStorage(valorDivisaEntry);
+            tipoCambios = await obtenerCambios(valorDivisaEntry);
         }
     
         const montoEntry = document.querySelector('#monto-input').value;
