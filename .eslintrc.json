@@ -3,16 +3,27 @@
         "browser": true,
         "es2020": true
     },
-    "extends": [
-        "standard"
-    ],
+    "extends": "eslint:recommended",
     "parserOptions": {
         "ecmaVersion": 11,
         "sourceType": "module"
     },
     "rules": {
-        "indent": ["error", "tab"],
-        "no-tabs": ["error", { "allowIndentationTabs" : true }],
-        "semi": ["error", "always"]
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
     }
 }
